@@ -4,6 +4,8 @@ import Login from "../views/Login.vue";
 import Profile from "../views/Profile.vue";
 import Register from "../views/Register.vue";
 import Training from "../views/Training.vue";
+import Logout from "../views/Logout.vue"
+import SpecificTraining from "../views/SpecificTraining.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +35,16 @@ const router = createRouter({
       name: "training",
       component: Training,
     },
+    {
+      path: "/SpecificTraining/:id",
+      name: "specificTraining",
+      component: SpecificTraining,
+    },
+    {
+      path: "/logout",
+      name: "Logout",
+      component: Logout
+    }
   ],
 });
 

@@ -1,7 +1,11 @@
 <script>
 import axios from "axios";
 import jwt_decode from "jwt-decode";
+import { RouterLink } from "vue-router";
 export default {
+  components: {
+    RouterLink
+  },
   data() {
     return {
       username: "",
@@ -78,7 +82,8 @@ export default {
               />
             </div>
             <!-- Sign button -->
-            <div class="flex items-center justify-between">
+            <div class="flex flex-col items-center justify-between">
+              <div>
               <button
                 class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
@@ -90,12 +95,16 @@ export default {
               >
                 Login
               </button>
-              <a
+              </div>
+              <br />
+              <div class="">
+                <RouterLink
                 class="inline-block align-baseline pt-3 font-bold text-sm text-blue-900 hover:text-blue-600"
-                href="#"
+                to="/register"
               >
                 Ainda não fez sua conta?
-              </a>
+              </RouterLink>
+              </div>
             </div>
           </div>
         </div>

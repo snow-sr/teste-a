@@ -34,9 +34,14 @@ export default {
       <div class="bg-nav">
         <Navbar />
       </div>
-      <div class="flex flex-col justify-center mt-32">
-        <profile :Athlete="Profile" />
-        <graph />
+      <div class="flex flex-col items-center justify-center mt-32">
+        <div class="w-screen flex flex-col items-center">
+          <profile :Athlete="Profile" />
+          <div class="mt-5">
+            <h1 class="text-center text-white font-bold">Seus últimos 3 meses na plataforma:</h1>
+            <graph />
+          </div>
+          </div>
       </div>
     </div>
   </div>

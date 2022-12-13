@@ -1,8 +1,15 @@
 <script>
 import Navbar from "../components/Navbar.vue";
+import CardV from "../components/CardVoley.vue"
+import CardB from "../components/CardBasket.vue"
+import CardF from "../components/CardFootbal.vue"
+
 export default {
   components: {
     Navbar,
+    CardV,
+    CardB,
+    CardF
   },
   data() {
     return {
@@ -13,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <main class="min-h-screen bg-gray-700">
+  <main class="min-h-screen text-gray-100 bg-gray-700">
     <div class="min-h-screen bg-primary">
       <div class="px-10 w-full bg-nav">
         <Navbar />
@@ -26,18 +33,20 @@ export default {
       </div>
       <div class="flex flex-col gap-8 w-full p-10 container mx-auto">
         <div class="text-xl" v-if="menu">
-          <h2>MENU MODALIDADES</h2>
+          <h2 class="text-center text-red-200 font-bold">MODALIDADES</h2>
+          <div class="pt-2 flex ">
+            <CardV />
+            <CardB />
+            <CardF />
+          </div>
         </div>
         <div>
-          <h2>NOTICIAS</h2>
+          <h2 class="text-center font-bold">NOTÍCIAS:</h2>
           <div class="pt-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad
-            provident fuga iusto nisi, magnam aperiam voluptates, eaque dolorem
-            molestiae ullam tempora eos aliquid quas dignissimos excepturi
-            labore assumenda amet? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Itaque repudiandae est similique rem molestiae
-            earum alias omnis libero veritatis quibusdam, suscipit at officia
-            fuga porro sapiente impedit quia accusantium! Veritatis.
+            Você sabia que no último mês você treinou mais de 30 vezes?
+            <br />Isso quer dizer que em média você treinou todos os dias do mês, e isso é muito importante para a criação de
+            resistência, além é claro de te deixar melhor no esporte!
+            <br />Continue assim!
           </div>
         </div>
       </div>
